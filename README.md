@@ -63,15 +63,20 @@ Click the image above or [watch the demo here](https://www.youtube.com/watch?v=e
 
 ## Technologies Used
 
-- Frontend: HTML, CSS, JavaScript, React.js
-- Backend: Node.js, Express
-- Database: MongoDB
-- Others: REST API, JWT for authentication, and responsive design libraries.
+- Frontend: HTML, CSS, PHP.
+- Database: My SQL
+- Others: VSCode,XAMPP
+  
+# Dependencies
 
-## Installation
+Ensure the following dependencies are installed and configured:
 
-To get a local copy up and running follow these simple steps:
+- XAMPP : A local web server environment.
+- MySQL : For database management.
 
-1. Clone the repo
-   ```bash
-   git clone https://github.com/yourusername/fashion-world.git
+## Contact
+
+For any questions or suggestions, please reach out to us:
+
+Partha Sarkar - partha.20210204072@aust.edu
+Bappy Chandra Debnath - bappy.cse.20210204074@aust.edu
