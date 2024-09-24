@@ -9,15 +9,17 @@ For Shoppers: Users can browse products without the need to sign up. However, if
 Fashion World is committed to providing a space where both businesses and shoppers can connect, making it easier for everyone to stay in touch with current fashion.
 ## Features
 
-- User Registration & Login: Create an account, log in, recover passwords, and manage user profiles.
-- Personalized Recommendations: AI-driven suggestions based on user preferences and browsing history.
-- Search & Filter: Find fashion items by category, price range, size, color, and brand.
-- Product Listings: Sellers can list their fashion products, manage descriptions, pricing, and availability.
+- Design: Easily browse through categories, collections, and trends with a clean, user-friendly layout
+- User Registration & Login: Create an account, log in and manage user profiles.
+- Sign_Up for Businesses: Any company can sign up and display their products.
+- Product Pages: Detailed product descriptions, multiple images, and size charts.
 - Shopping Cart: Users can add items to their cart, view total costs, and proceed to checkout seamlessly.
-- Wishlist: Save favorite items for future purchases.
 - Order Management: Track orders, view order history, and receive updates on shipping.
 - Sustainable Shopping: Highlight sustainable brands and products for eco-conscious shoppers.
-- Responsive Design: Optimized for mobile and desktop devices.
+- Secure Checkout: Multiple payment options for convenience and security.
+- About Us:Everybody knows about us with details information.
+- Contruct Us:Provide contruct information & track location.
+- Responsive Design: Optimized for devices.
 
 ## Demo Video
 
