@@ -25,7 +25,7 @@ Click the image above or [watch the demo here](https://www.youtube.com/watch?v=e
 ## Screenshots
 
 ### Homepage
-![Homepage](screenshot/homepage.png)
+![Homepage](https://github.com/bappyBDN/MyProject/blob/main/images/a4%20(1).png?raw=true)
 
 ### Registration
 ![Registration](screenshot/register.png)
