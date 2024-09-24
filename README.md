@@ -1,7 +1,12 @@
   # Fashion World
 
-Fashion World is an online shopping platform designed to provide a personalized, user-friendly, and sustainable fashion shopping experience. Users can explore a wide range of fashion items, get personalized recommendations, and shop sustainably.
+Fashion World aims to create an online shopping experience that is easy to use, personalized, and helps users make better fashion choices. We also want to build a community where people can share their styles and fashion tips.
 
+For Company: Any small company that does not have an online presence can sign up on our platform by providing the required documents. They will then be able to showcase their products to a large number of online customers, which can increase their profits and popularity. Larger companies are also welcome to join and expand their reach.
+
+For Shoppers: Users can browse products without the need to sign up. However, if they wish to make a purchase, they will need to create an account to complete their order. This platform offers shoppers access to a wide range of companies and products, giving them plenty of options to choose from and helping them stay updated with the latest fashion trends.
+
+Fashion World is committed to providing a space where both businesses and shoppers can connect, making it easier for everyone to stay in touch with current fashion.
 ## Features
 
 - User Registration & Login: Create an account, log in, recover passwords, and manage user profiles.
