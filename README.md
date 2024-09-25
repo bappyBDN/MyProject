@@ -50,9 +50,18 @@ Click the image above or [watch the demo here](https://www.youtube.com/watch?v=e
 ![Profile](https://github.com/bappyBDN/MyProject/blob/main/scPc/Screenshot%202024-09-25%20130334%20-%20Copy%20(2).png?raw=true)
 
 ### Shop Page
-![Shop Page](screenshot/search_filter.png)
+![Shop Page](https://github.com/bappyBDN/MyProject/blob/main/scPc/Screenshot%202024-09-25%20130438.png?raw=true)
 
-### home Design
+### Product details
+![product details ](screenshot/product_details.png)
+
+### home Design 1
+![home design](screenshot/product_details.png)
+
+### home Design 2
+![home design](screenshot/product_details.png)
+
+### home Design 3
 ![home design](screenshot/product_details.png)
 
 ### Shopping Cart
