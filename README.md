@@ -74,10 +74,10 @@ Click the image above or [watch the demo here](https://www.youtube.com/watch?v=e
 ![Confirmed](https://github.com/bappyBDN/MyProject/blob/main/orderpic/Screenshot%202024-09-25%20134023.png?raw=true)
 
 ### About
-![Order Management](screenshot/order_management.png)
+![About](https://github.com/bappyBDN/MyProject/blob/main/scPc/Screenshot%202024-09-25%20130459%20-%20Copy%20-%20Copy.png?raw=true)
 
 ### Conturac
-![Notifications](screenshot/notifications.png)
+![contact](screenshot/notifications.png)
 
 
 ## Technologies Used
