@@ -25,9 +25,9 @@ Fashion World is committed to providing a space where both businesses and shoppe
 
 Watch the full walkthrough of Fashion World in action:
 
-[![Fashion World Demo](https://youtu.be/ZEVfx_rNf9w?si=9lrh97-Xw7OpWqIx)
+[![Fashion World Demo](https://youtu.be/ZEVfx_rNf9w)
 
-Click the image above or [watch the demo here]).
+Click the image above or [https://youtu.be/ZEVfx_rNf9w]).
 
 ## Screenshots
 
