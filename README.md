@@ -47,25 +47,26 @@ Click the image above or [watch the demo here](https://www.youtube.com/watch?v=e
 ![Login](https://github.com/bappyBDN/MyProject/blob/main/scPc/Screenshot%202024-09-25%20130315.png?raw=true)
 
 ### User Profile
-![Profile](screenshot/profile.png)
+![Profile](https://github.com/bappyBDN/MyProject/blob/main/scPc/Screenshot%202024-09-25%20130334%20-%20Copy%20(2).png?raw=true)
 
-### Search and Filter
-![Search and Filter](screenshot/search_filter.png)
+### Shop Page
+![Shop Page](screenshot/search_filter.png)
 
-### Product Details
-![Product Details](screenshot/product_details.png)
+### home Design
+![home design](screenshot/product_details.png)
 
 ### Shopping Cart
 ![Shopping Cart](screenshot/cart.png)
 
-### Wishlist
+###  Ordered Confirmation
 ![Wishlist](screenshot/wishlist.png)
 
-### Order Management
+### About
 ![Order Management](screenshot/order_management.png)
 
-### Notifications
+### Conturac
 ![Notifications](screenshot/notifications.png)
+
 
 ## Technologies Used
 
