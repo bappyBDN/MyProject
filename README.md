@@ -34,10 +34,13 @@ Click the image above or [watch the demo here](https://www.youtube.com/watch?v=e
 ### Homepage
 ![Homepage](https://github.com/bappyBDN/MyProject/blob/main/scPc/Screenshot%202024-09-25%20125327%20-%20Copy%20(2).png)
 
-### Registration
-![Registration](screenshot/register.png)
+### Producer Registration
+![Producer Registration](https://github.com/bappyBDN/MyProject/blob/main/scPc/Screenshot%202024-09-25%20130621.png)
 
-### Login
+### Producer Login
+![Login](screenshot/login.png)
+
+### User Login
 ![Login](screenshot/login.png)
 
 ### User Profile
