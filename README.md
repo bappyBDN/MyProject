@@ -68,10 +68,10 @@ Click the image above or [watch the demo here](https://www.youtube.com/watch?v=e
 ![Shopping Cart](https://github.com/bappyBDN/MyProject/blob/main/scPc/Screenshot%202024-09-25%20130412%20-%20Copy%20-%20Copy.png?raw=true)
 
 ### Order Page
-![Shopping Cart](screenshot/cart.png)
+![Order](https://github.com/bappyBDN/MyProject/blob/main/orderpic/Screenshot%202024-09-25%20133947%20-%20Copy.png?raw=true)
 
 ###  Ordered Confirmation
-![Wishlist](screenshot/wishlist.png)
+![Confirmed](screenshot/wishlist.png)
 
 ### About
 ![Order Management](screenshot/order_management.png)
