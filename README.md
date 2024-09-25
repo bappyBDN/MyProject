@@ -96,6 +96,5 @@ Ensure the following dependencies are installed and configured:
 ## Contact
 
 For any questions or suggestions, please reach out to us:
-
-- Partha Sarkar - partha.20210204072@aust.edu
 - Bappy Chandra Debnath - bappy.cse.20210204074@aust.edu
+- Partha Sarkar - partha.20210204072@aust.edu
