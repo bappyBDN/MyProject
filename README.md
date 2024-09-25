@@ -65,7 +65,7 @@ Click the image above or [watch the demo here](https://www.youtube.com/watch?v=e
 ![home design](https://github.com/bappyBDN/MyProject/blob/main/scPc/Screenshot%202024-09-25%20130215%20-%20Copy%20-%20Copy.png?raw=true)
 
 ### Shopping Cart
-![Shopping Cart](screenshot/cart.png)
+![Shopping Cart](https://github.com/bappyBDN/MyProject/blob/main/scPc/Screenshot%202024-09-25%20130412%20-%20Copy%20-%20Copy.png?raw=true)
 
 ### Order Page
 ![Shopping Cart](screenshot/cart.png)
