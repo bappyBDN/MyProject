@@ -59,7 +59,7 @@ Click the image above or [watch the demo here](https://www.youtube.com/watch?v=e
 ![home design](https://github.com/bappyBDN/MyProject/blob/main/scPc/Screenshot%202024-09-25%20125413%20-%20Copy%20(2).png?raw=true)
 
 ### home Design 2
-![home design](screenshot/product_details.png)
+![home design](https://github.com/bappyBDN/MyProject/blob/main/scPc/Screenshot%202024-09-25%20130108%20-%20Copy%20(2).png?raw=true)
 
 ### home Design 3
 ![home design](screenshot/product_details.png)
