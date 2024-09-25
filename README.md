@@ -71,7 +71,7 @@ Click the image above or [watch the demo here](https://www.youtube.com/watch?v=e
 ![Order](https://github.com/bappyBDN/MyProject/blob/main/orderpic/Screenshot%202024-09-25%20133947%20-%20Copy.png?raw=true)
 
 ###  Ordered Confirmation
-![Confirmed](screenshot/wishlist.png)
+![Confirmed](https://github.com/bappyBDN/MyProject/blob/main/orderpic/Screenshot%202024-09-25%20134023.png?raw=true)
 
 ### About
 ![Order Management](screenshot/order_management.png)
