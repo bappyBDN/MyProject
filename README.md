@@ -32,7 +32,7 @@ Click the image above or [watch the demo here](https://www.youtube.com/watch?v=e
 ## Screenshots
 
 ### Homepage
-![Homepage](https://github.com/bappyBDN/MyProject/blob/main/images/a4%20(1).png?raw=true)
+![Homepage](https://github.com/bappyBDN/MyProject/blob/main/scPc/Screenshot%202024-09-25%20125327%20-%20Copy%20(2).png)
 
 ### Registration
 ![Registration](screenshot/register.png)
