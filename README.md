@@ -40,11 +40,11 @@ Click the image above or [watch the demo here](https://www.youtube.com/watch?v=e
 ### Producer Login
 ![Login](https://github.com/bappyBDN/MyProject/blob/main/scPc/Screenshot%202024-09-25%20130552.png?raw=true)
 
-### Producedr Page
+### Producer Page
 ![Profile](https://github.com/bappyBDN/MyProject/blob/main/scPc/Screenshot%202024-09-25%20130603.png?raw=true)
 
 ### User Login
-![Login](screenshot/login.png)
+![Login](https://github.com/bappyBDN/MyProject/blob/main/scPc/Screenshot%202024-09-25%20130315.png?raw=true)
 
 ### User Profile
 ![Profile](screenshot/profile.png)
