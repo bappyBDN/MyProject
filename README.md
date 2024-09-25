@@ -53,7 +53,7 @@ Click the image above or [watch the demo here](https://www.youtube.com/watch?v=e
 ![Shop Page](https://github.com/bappyBDN/MyProject/blob/main/scPc/Screenshot%202024-09-25%20130438.png?raw=true)
 
 ### Product details
-![product details ](screenshot/product_details.png)
+![product details ](https://github.com/bappyBDN/MyProject/blob/main/scPc/Screenshot%202024-09-25%20125434%20-%20Copy%20-%20Copy.png?raw=true)
 
 ### home Design 1
 ![home design](screenshot/product_details.png)
