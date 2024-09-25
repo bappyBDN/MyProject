@@ -41,7 +41,7 @@ Click the image above or [watch the demo here](https://www.youtube.com/watch?v=e
 ![Login](https://github.com/bappyBDN/MyProject/blob/main/scPc/Screenshot%202024-09-25%20130552.png?raw=true)
 
 ### Producedr Page
-![Profile](screenshot/profile.png)
+![Profile](https://github.com/bappyBDN/MyProject/blob/main/scPc/Screenshot%202024-09-25%20130603.png?raw=true)
 
 ### User Login
 ![Login](screenshot/login.png)
