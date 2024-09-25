@@ -25,7 +25,7 @@ Fashion World is committed to providing a space where both businesses and shoppe
 
 Watch the full walkthrough of Fashion World in action:
 
-[![Fashion World Demo](https://i.ytimg.com/vi/example/hqdefault.jpg)](https://www.youtube.com/watch?v=example)
+[![Fashion World Demo](https://youtu.be/ZEVfx_rNf9w?si=x8pqfPjDn8AB7OMO)
 
 Click the image above or [watch the demo here](https://www.youtube.com/watch?v=example).
 
@@ -77,7 +77,7 @@ Click the image above or [watch the demo here](https://www.youtube.com/watch?v=e
 ![About](https://github.com/bappyBDN/MyProject/blob/main/scPc/Screenshot%202024-09-25%20130459%20-%20Copy%20-%20Copy.png?raw=true)
 
 ### Conturac
-![contact](screenshot/notifications.png)
+![contact](https://github.com/bappyBDN/MyProject/blob/main/scPc/Screenshot%202024-09-25%20130520%20-%20Copy.png?raw=true)
 
 
 ## Technologies Used
