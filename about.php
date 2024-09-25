@@ -1,3 +1,6 @@
+<?php
+  require('connection.php');
+  ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,6 +11,7 @@
         <title> Onlinr Shop</title>
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
         <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <script scr="script.js">
@@ -15,20 +19,8 @@
         </script>
        
         <!-- Navbar start-->
-      <section id="header">
-      <h4>Fasion World</h4>
-      <!-- <a href ="#"><img src="images/logo.png" class="logo" alt=" "> </a>-->
-        <div>
-            <ul id="navber">
-                <li><a  href="index.php">Home</a></li>
-                <li><a  href="shop.php">Shop</a></li>
-                <li><a href="blog.php">Blog</a></li>
-                <li><a class="active" href="about.php">About</a></li>
-                <li><a href="contact.php">Contact</a></li>
-                <li><a href="cart.php"><i class="fal fa-shopping-cart"> </i>></i></a></li>
-            </ul>
-        </div>
-      </section>
+        <?php include 'header.php'; ?>
+
       <section class="about-hader">
        
         <h2>#Know Us</h2>
@@ -131,8 +123,8 @@
 
         <div class="col">
             <h4>About</h4>
-            <a href="#"> About Us </a>
-            <a href="#"> Delivery Information </a>
+            <a href="aboutus.php"> About Us </a>
+            <a href="deliveryinfo.php"> Delivery Information </a>
             <a href="#"> Privacy Policy </a>
             <a href="#"> Terms and Conditions </a>
             <a href="#"> Contuct Us </a>

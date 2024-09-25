@@ -11,6 +11,7 @@
         <title> Onlinr Shop</title>
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
         <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <script scr="script.js">
@@ -18,24 +19,12 @@
         </script>
        
         <!-- Navbar start-->
-      <section id="header">
-      <h4>Fasion World</h4>
-      <!-- <a href ="#"><img src="images/logo.png" class="logo" alt=" "> </a>-->
-        <div>
-            <ul id="navber">
-                <li><a  href="index.php">Home</a></li>
-                <li><a  href="shop.php">Shop</a></li>
-                <li><a  href="blog.php">Blog</a></li>
-                <li><a  href="about.php">About</a></li>
-                <li><a class="active" href="contact.php">Contact</a></li>
-                <li><a href="cart.php"><i class="fal fa-shopping-cart"> </i>></i></a></li>
-            </ul>
-        </div>
-      </section>
+        <?php include 'header.php'; ?>
+
       
       <section id="divinfo" >
         <h4>DELIVERY INFORMATION</h1>
-        <p>YELLOW highly values the urgency of your orders. We endeavor to make sure that your ordered products reach your door in the fastest possible time. Once your order is confirmed, you will receive a confirmation mail from our Customer Services Department.<br><br>
+        <p>Fasion World highly values the urgency of your orders. We endeavor to make sure that your ordered products reach your door in the fastest possible time. Once your order is confirmed, you will receive a confirmation mail from our Customer Services Department.<br><br>
 
         Your ordered products will be sent to your given address in 5 to 8 business days for anywhere in Bangladesh.<strong>The shipping will be completely FREE</strong><br>We start the shipping process within 24 hours. So, if you want to cancel or modify any order, please inform our Customer Services Department at your earliest.<br>
         We start the shipping process within 24 hours. So, if you want to cancel or modify any order, please inform our Customer Services Department at your earliest.

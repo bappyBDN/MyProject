@@ -1,3 +1,38 @@
+<?php
+  require('connection.php');
+
+  session_start();
+
+// Check if the user is logged in
+if (isset($_SESSION['U_Email'])) {
+    $userName = $_SESSION['U_FName'];
+    $userEmail = $_SESSION['U_Email'];
+} else {
+    // Redirect to login page if not logged in
+    header('Location: login.php');
+    exit();
+}
+
+  if(isset($_POST['add_to_cart'])){
+    $product_Id  = $_POST['product_Id'];
+    $product_name = $_POST['product_name'];
+    $product_price = $_POST['product_price'];
+    $product_image = $_POST['product_image'];
+    $product_quantity = 1;
+ 
+    $select_cart = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$product_name' AND User_Email= '$userEmail' ");
+ 
+    if(mysqli_num_rows($select_cart) > 0){
+       $message[] = 'product already added to cart';
+    }else{
+       $insert_product = mysqli_query($conn, "INSERT INTO `cart`(name, price, image, quantity,IG_ID,User_Email)
+        VALUES('$product_name', '$product_price', '$product_image', '$product_quantity','$product_Id', '$userEmail')");
+       $message[] = 'product added to cart succesfully';
+    }
+ 
+ }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,27 +43,27 @@
         <title> Onlinr Shop</title>
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
         <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
+    <?php
+
+if(isset($message)){
+   foreach($message as $message){
+      echo '<div class="message"><span>'.$message.'</span> <i class="fas fa-times" onclick="this.parentElement.style.display = `none`;"></i> </div>';
+   };
+};
+
+?>
+
         <script scr="script.js">
 
         </script>
        
         <!-- Navbar start-->
-      <section id="header">
-      <h4>Fasion World</h4>
-      <!-- <a href ="#"><img src="images/logo.png" class="logo" alt=" "> </a>-->
-        <div>
-            <ul id="navber">
-                <li><a  href="index.php">Home</a></li>
-                <li><a class="active" href="shop.php">Shop</a></li>
-                <li><a href="blog.php">Blog</a></li>
-                <li><a href="about.php">About</a></li>
-                <li><a href="contact.php">Contact</a></li>
-                <li><a href="cart.php"><i class="fal fa-shopping-cart"> </i>></i></a></li>
-            </ul>
-        </div>
-      </section>
+      
+        <?php include 'header.php'; ?>
+
       <section class="shop-hader">
        
         <h2>Let's Shop</h2>
@@ -38,371 +73,75 @@
       </section>
      
 
-      <section id="product1" class ="section-p1">
-       
-        <div class="pro-container">
-            <div class="pro" onclick="window.location.href='sproduct.html';">
-                <img src="images/s1.jpg" alt="">
-                <div class="des">
-                    <span>adidas</span>
-                    <h6>New arrive Shirt</h5>
-                    <div class="star">
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                    </div>
-                    <h3> 1299tk </h3>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            
-            </div>
-            <div class="pro" onclick="window.location.href='sproduct.html';">
-                <img src="images/s2.jpg" alt="">
-                <div class="des">
-                    <span>adidas</span>
-                    <h6>New arrive Shirt</h5>
-                    <div class="star">
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                    </div>
-                    <h3> 1299tk </h3>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            
-            </div>
+      <section id="product1" class="section-p1">
+    <div class="pro-container">
 
-            <div class="pro">
-                <img src="images/n1.jpg" alt="">
-                <div class="des">
-                    <span>adidas</span>
-                    <h6>New arrive Shirt</h5>
-                    <div class="star">
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                    </div>
-                    <h3> 1299tk </h3>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            
-            </div>
+        <?php 
+        $sql = "SELECT * FROM product_img WHERE IG_Action='Yes' AND IG_Feature='Yes'";
+        $res = mysqli_query($conn, $sql);
 
-            <div class="pro">
-                <img src="images/n2.jpg" alt="">
-                <div class="des">
-                    <span>adidas</span>
-                    <h6>New arrive Shirt</h5>
-                    <div class="star">
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                    </div>
-                    <h3> 1299tk </h3>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            
-            </div>
+        if ($res) {
+            $count = mysqli_num_rows($res);
 
+            if ($count > 0) {
+                while ($row = mysqli_fetch_assoc($res)) {
+                    $IG_ID = $row['IG_ID'];
+                    $IG_Title = $row['IG_Title'];
+                    $IG_CName = $row['IG_CName'];
+                    $IG_Price = $row['IG_Price'];
+                    $IG_Name  = $row['IG_Name'];
+        ?>
+          
             <div class="pro">
-                <img src="images/n3.jpg" alt="">
+            <form action="" method="post">
+                <?php
+                if($IG_Name=="")
+                {
+                    echo "Image not availavale";
+                }
+                else{
+                    ?>
+                     <img src="images/<?php echo $IG_Name; ?>" alt="">
+                     <?php
+                }
+                ?>
+               
                 <div class="des">
-                    <span>adidas</span>
-                    <h6>New arrive Shirt</h5>
+                    <h3><?php echo $IG_ID; ?></h3>
+                    <span><?php echo $IG_CName; ?></span>
+                    <h6><?php echo $IG_Title; ?></h6>
                     <div class="star">
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                     </div>
-                    <h3> 1299tk </h3>
+                    <h3><?php echo $IG_Price; ?></h3>
                 </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            
-            </div>
+                <input type="submit" class="btn" value="add to cart" name="add_to_cart">
 
-            <div class="pro">
-                <img src="images/n4.jpg" alt="">
-                <div class="des">
-                    <span>adidas</span>
-                    <h6>New arrive Shirt</h5>
-                    <div class="star">
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                    </div>
-                    <h3> 1299tk </h3>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+               <!-- <a href="#?IG_ID=<?php echo $IG_ID; ?>"><i class="fal fa-shopping-cart cart"></i></a> -->
+             </div>
+             <input type="hidden" name="product_Id" value="<?php echo $IG_ID; ?>">
+             <input type="hidden" name="product_name" value="<?php echo $IG_CName; ?>">
+            <input type="hidden" name="product_price" value="<?php echo $IG_Price; ?>">
+            <input type="hidden" name="product_image" value="<?php echo $IG_Name; ?>">
             
-            </div>
+         </form>
+      
+        <?php
+                }
+            } else {
+                echo "<div class='error'>Product not available.</div>";
+            }
+        } else {
+            echo "<div class='error'>Failed to execute query: " . mysqli_error($conn) . "</div>";
+        }
+        ?>
+     </div>
 
-            <div class="pro">
-                <img src="images/n7.jpg" alt="">
-                <div class="des">
-                    <span>adidas</span>
-                    <h6>New arrive Shirt</h5>
-                    <div class="star">
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                    </div>
-                    <h3> 1299tk </h3>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            
-            </div>
-
-            <div class="pro">
-                <img src="images/n8.jpg" alt="">
-                <div class="des">
-                    <span>adidas</span>
-                    <h6>New arrive Shirt</h5>
-                    <div class="star">
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                    </div>
-                    <h3> 1299tk </h3>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            
-            </div>
-
-            <div class="pro">
-                <img src="images/n5.jpg" alt="">
-                <div class="des">
-                    <span>adidas</span>
-                    <h6>New arrive Shirt</h5>
-                    <div class="star">
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                    </div>
-                    <h3> 1299tk </h3>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            
-            </div>
-
-            <div class="pro">
-                <img src="images/n3.jpg" alt="">
-                <div class="des">
-                    <span>adidas</span>
-                    <h6>New arrive Shirt</h5>
-                    <div class="star">
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                    </div>
-                    <h3> 1299tk </h3>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            
-            </div>
-           
-            <div class="pro">
-                <img src="images/f8.jpg" alt="">
-                <div class="des">
-                    <span>cara</span>
-                    <h6>New arrive Shirt</h5>
-                    <div class="star">
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                    </div>
-                    <h3> 1799tk </h3>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            
-            </div>
-            <div class="pro">
-                <img src="images/f7.jpg" alt="">
-                <div class="des">
-                    <span>cara</span>
-                    <h6>New arrive Shirt</h5>
-                    <div class="star">
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                    </div>
-                    <h3> 1799tk </h3>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            
-            </div>
-
-            <div class="pro">
-                <img src="images/n1.jpg" alt="">
-                <div class="des">
-                    <span>cara</span>
-                    <h6>New arrive Shirt</h5>
-                    <div class="star">
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                    </div>
-                    <h3> 1799tk </h3>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            
-            </div>
-
-            <div class="pro">
-                <img src="images/n2.jpg" alt="">
-                <div class="des">
-                    <span>cara</span>
-                    <h6>New arrive Shirt</h5>
-                    <div class="star">
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                    </div>
-                    <h3> 1799tk </h3>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            
-            </div>
-
-            <div class="pro">
-                <img src="images/n3.jpg" alt="">
-                <div class="des">
-                    <span>cara</span>
-                    <h6>New arrive Shirt</h5>
-                    <div class="star">
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                    </div>
-                    <h3> 1799tk </h3>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            
-            </div>
-
-            <div class="pro">
-                <img src="images/n4.jpg" alt="">
-                <div class="des">
-                    <span>cara</span>
-                    <h6>New arrive Shirt</h5>
-                    <div class="star">
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                    </div>
-                    <h3> 1799tk </h3>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            
-            </div>
-
-            <div class="pro">
-                <img src="images/n7.jpg" alt="">
-                <div class="des">
-                    <span>cara</span>
-                    <h6>New arrive Shirt</h5>
-                    <div class="star">
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                    </div>
-                    <h3> 1799tk </h3>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            
-            </div>
-
-            <div class="pro">
-                <img src="images/n8.jpg" alt="">
-                <div class="des">
-                    <span>cara</span>
-                    <h6>New arrive Shirt</h5>
-                    <div class="star">
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                    </div>
-                    <h3> 1799tk </h3>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            
-            </div>
-
-            <div class="pro">
-                <img src="images/n5.jpg" alt="">
-                <div class="des">
-                    <span>cara</span>
-                    <h6>New arrive Shirt</h5>
-                    <div class="star">
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                    </div>
-                    <h3> 1799tk </h3>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            
-            </div>
-
-            <div class="pro">
-                <img src="images/n3.jpg" alt="">
-                <div class="des">
-                    <span>cara</span>
-                    <h6>New arrive Shirt</h5>
-                    <div class="star">
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                       <i class="fas fa-star"></i> 
-                    </div>
-                    <h3> 1799tk </h3>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            
-            </div>
-
-
-            
-         </div>
-      </section>
+    </section>
 
       <section id="pagination" class="section-p1">
        <a href="#">1</a>
@@ -453,11 +192,11 @@
 
         <div class="col">
             <h4>About</h4>
-            <a href="#"> About Us </a>
-            <a href="#"> Delivery Information </a>
+            <a href="aboutus.php"> About Us </a>
+            <a href="deliveryinfo.php"> Delivery Information </a>
             <a href="#"> Privacy Policy </a>
             <a href="#"> Terms and Conditions </a>
-            <a href="#"> Contuct Us </a>
+            <a href="contact.php"> Contuct Us </a>
         </div>
         <div class="col">
             <h4>My Account</h4>
